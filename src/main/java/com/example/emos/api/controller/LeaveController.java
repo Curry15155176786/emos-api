@@ -36,7 +36,6 @@ public class LeaveController {
         int start = (page - 1) * length;
         HashMap param = JSONUtil.parse(form).toBean(HashMap.class);
         param.put("start", start);
-        System.out.println();
         param.put("myId", StpUtil.getLoginIdAsInt());
         if (!(StpUtil.hasPermission("LEAVE:SELECT")||StpUtil.hasPermission("ROOT"))) {
             param.put("userId", StpUtil.getLoginIdAsInt());
