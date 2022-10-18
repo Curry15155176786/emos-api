@@ -15,6 +15,7 @@ public class LeaveServiceImpl implements LeaveService {
 
     @Override
     public PageUtils searchLeaveByPage(HashMap param) {
+        System.out.println("00000");
         ArrayList<HashMap> list = leaveDao.searchLeaveByPage(param);
         long count = leaveDao.searchLeaveCount(param);
         int start = (Integer) param.get("start");
